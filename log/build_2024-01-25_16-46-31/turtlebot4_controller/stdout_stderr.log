@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/turtlebot4_controller/turtlebot4_controller.egg-info
+writing ../../build/turtlebot4_controller/turtlebot4_controller.egg-info/PKG-INFO
+writing dependency_links to ../../build/turtlebot4_controller/turtlebot4_controller.egg-info/dependency_links.txt
+writing entry points to ../../build/turtlebot4_controller/turtlebot4_controller.egg-info/entry_points.txt
+writing requirements to ../../build/turtlebot4_controller/turtlebot4_controller.egg-info/requires.txt
+writing top-level names to ../../build/turtlebot4_controller/turtlebot4_controller.egg-info/top_level.txt
+writing manifest file '../../build/turtlebot4_controller/turtlebot4_controller.egg-info/SOURCES.txt'
+reading manifest file '../../build/turtlebot4_controller/turtlebot4_controller.egg-info/SOURCES.txt'
+writing manifest file '../../build/turtlebot4_controller/turtlebot4_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build
+creating /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build/lib
+creating /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build/lib/turtlebot4_controller
+copying turtlebot4_controller/__init__.py -> /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build/lib/turtlebot4_controller
+copying turtlebot4_controller/turtlebot4_controller_node.py -> /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build/lib/turtlebot4_controller
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages/turtlebot4_controller
+copying /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build/lib/turtlebot4_controller/__init__.py -> /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages/turtlebot4_controller
+copying /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build/lib/turtlebot4_controller/turtlebot4_controller_node.py -> /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages/turtlebot4_controller
+byte-compiling /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages/turtlebot4_controller/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages/turtlebot4_controller/turtlebot4_controller_node.py to turtlebot4_controller_node.cpython-310.pyc
+running install_data
+creating /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/share/ament_index
+creating /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/share/ament_index/resource_index
+creating /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/share/ament_index/resource_index/packages
+copying resource/turtlebot4_controller -> /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/share/turtlebot4_controller
+running install_egg_info
+Copying ../../build/turtlebot4_controller/turtlebot4_controller.egg-info to /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages/turtlebot4_controller-0.0.0-py3.10.egg-info
+running install_scripts
+Installing turtlebot4_controller_node script to /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/turtlebot4_controller
+writing list of installed files to '/home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/install.log'

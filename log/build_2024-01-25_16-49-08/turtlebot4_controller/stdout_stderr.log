@@ -1,0 +1,19 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+writing turtlebot4_controller.egg-info/PKG-INFO
+writing dependency_links to turtlebot4_controller.egg-info/dependency_links.txt
+writing entry points to turtlebot4_controller.egg-info/entry_points.txt
+writing requirements to turtlebot4_controller.egg-info/requires.txt
+writing top-level names to turtlebot4_controller.egg-info/top_level.txt
+reading manifest file 'turtlebot4_controller.egg-info/SOURCES.txt'
+writing manifest file 'turtlebot4_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages/turtlebot4-controller.egg-link (link to .)
+Installing turtlebot4_controller_node script to /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/turtlebot4_controller
+
+Installed /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller
+running install_data

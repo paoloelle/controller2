@@ -1,0 +1,21 @@
+[0.613s] Invoking command in '/home/pleopardi/turtlebot4_controller/build/turtlebot4_controller': PYTHONPATH=/home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/prefix_override:/home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build --no-deps install_data
+[0.813s] running develop
+[0.813s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.813s]   warnings.warn(
+[0.813s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.814s]   warnings.warn(
+[0.963s] running egg_info
+[0.963s] writing turtlebot4_controller.egg-info/PKG-INFO
+[0.963s] writing dependency_links to turtlebot4_controller.egg-info/dependency_links.txt
+[0.963s] writing entry points to turtlebot4_controller.egg-info/entry_points.txt
+[0.964s] writing requirements to turtlebot4_controller.egg-info/requires.txt
+[0.964s] writing top-level names to turtlebot4_controller.egg-info/top_level.txt
+[0.965s] reading manifest file 'turtlebot4_controller.egg-info/SOURCES.txt'
+[0.965s] writing manifest file 'turtlebot4_controller.egg-info/SOURCES.txt'
+[0.966s] running build_ext
+[0.966s] Creating /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages/turtlebot4-controller.egg-link (link to .)
+[0.967s] Installing turtlebot4_controller_node script to /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/turtlebot4_controller
+[0.967s] 
+[0.967s] Installed /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller
+[0.967s] running install_data
+[0.981s] Invoked command in '/home/pleopardi/turtlebot4_controller/build/turtlebot4_controller' returned '0': PYTHONPATH=/home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/prefix_override:/home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build --no-deps install_data

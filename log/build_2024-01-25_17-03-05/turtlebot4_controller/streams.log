@@ -1,0 +1,18 @@
+[0.839s] Invoking command in '/home/pleopardi/turtlebot4_controller/build/turtlebot4_controller': PYTHONPATH=/home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/prefix_override:/home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build --no-deps install_data
+[1.117s] running develop
+[1.316s] running egg_info
+[1.316s] writing turtlebot4_controller.egg-info/PKG-INFO
+[1.316s] writing dependency_links to turtlebot4_controller.egg-info/dependency_links.txt
+[1.317s] writing entry points to turtlebot4_controller.egg-info/entry_points.txt
+[1.317s] writing requirements to turtlebot4_controller.egg-info/requires.txt
+[1.317s] writing top-level names to turtlebot4_controller.egg-info/top_level.txt
+[1.318s] reading manifest file 'turtlebot4_controller.egg-info/SOURCES.txt'
+[1.319s] writing manifest file 'turtlebot4_controller.egg-info/SOURCES.txt'
+[1.321s] running build_ext
+[1.321s] Creating /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages/turtlebot4-controller.egg-link (link to .)
+[1.321s] Installing turtlebot4_controller_node script to /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/turtlebot4_controller
+[1.322s] 
+[1.322s] Installed /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller
+[1.322s] running install_data
+[1.322s] copying package.xml -> /home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/share/turtlebot4_controller
+[1.347s] Invoked command in '/home/pleopardi/turtlebot4_controller/build/turtlebot4_controller' returned '0': PYTHONPATH=/home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/prefix_override:/home/pleopardi/turtlebot4_controller/install/turtlebot4_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/pleopardi/turtlebot4_controller/build/turtlebot4_controller/build --no-deps install_data
