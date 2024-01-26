@@ -6,25 +6,43 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 from rclpy.qos import qos_profile_sensor_data
+from irobot_create_msgs.msg import HazardDetection, HazardDetectionVector
 
 class Controller_Node(Node):
 
     def __init__(self):
 
         super().__init__('ann_controller')
-        self.subscription = self.create_subscription(
+        
+        self.scan_subscription = self.create_subscription(
             LaserScan,
             'scan',
             self.scan_callback,
             10
         )
 
-        self.subscription
+        self.hazard_subscription= self.create_subscription(
+            HazardDetectionVector,
+            'hazard_detection',
+            self.hazard_callback,
+            10
+        )
+
+        self.scan_subscription
+        self.hazard_subscription
 
         self.publisher = self.create_publisher(LaserScan, 'filtered_scan', 10)
 
         self.min_angle = -2.5
         self.max_angle = -0.5
+
+    # detect collision
+    def hazard_callback(self, msg):
+        if len(msg.detections) != 0:
+            hazard = msg.detections[0]
+            if hazard.type == 1:
+                print(hazard)
+                
 
 
 
@@ -51,8 +69,6 @@ class Controller_Node(Node):
         filtered_scan.range_max = msg.range_max
         filtered_scan.ranges = filtered_ranges
         filtered_scan.intensities = msg.intensities
-
-        print(len(filtered_ranges))
 
         self.publisher.publish(filtered_scan)
 
