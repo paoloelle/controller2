@@ -7,6 +7,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 from rclpy.qos import qos_profile_sensor_data
 from irobot_create_msgs.msg import HazardDetection, HazardDetectionVector
+from ANN_controller import ANN_controller
 
 class Controller_Node(Node):
 
@@ -36,17 +37,16 @@ class Controller_Node(Node):
         self.min_angle = -2.5
         self.max_angle = -0.5
 
-    # detect collision
+        self.ann = ANN_controller(3, 3, 2) # input size, hidden size, output size
+
+    # detect collision with bumper
     def hazard_callback(self, msg):
         if len(msg.detections) != 0:
             hazard = msg.detections[0]
             if hazard.type == 2:
-                self.get_logger().info(hazard)
-                
-
-
-
-    
+                self.get_logger().info('Collision')
+                # TODO qui devo salvarmi un valore che sia 0 o 1 dipendentemente se
+                # c'e stata o meno una collisione
 
     def scan_callback(self, msg):
         
@@ -72,12 +72,16 @@ class Controller_Node(Node):
 
         self.publisher.publish(filtered_scan)
 
+        # todo da capire come fare il forward contemporaneo delle infomrazioni provenienti da due sensori (sensor fusion)
+
+        #lin_vel, ang_veö = self.ann.forward() qui ottengo i valori da pubblicare nel tpoic
 
 def main(args=None):
 
     rclpy.init(args=args)
 
     ann_controller = Controller_Node()
+    ann_controller.ann.upload_parameters()# parameters from neuroevolution
     rclpy.spin(ann_controller)
     
     ann_controller.destroy_node()
