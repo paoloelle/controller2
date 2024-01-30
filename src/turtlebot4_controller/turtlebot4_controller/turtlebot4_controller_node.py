@@ -7,7 +7,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 from rclpy.qos import qos_profile_sensor_data
 from irobot_create_msgs.msg import HazardDetection, HazardDetectionVector
-#import ANN_controller
+import turtlebot4_controller.ANN_controller as controller
 
 class Controller_Node(Node):
 
@@ -37,7 +37,7 @@ class Controller_Node(Node):
         self.min_angle = -2.5
         self.max_angle = -0.5
 
-        #TODO self.ann = ANN_controller(3, 3, 2) # input size, hidden size, output size
+        self.ann = controller(3, 3, 2) # input size, hidden size, output size
 
     # detect collision with bumper
     def hazard_callback(self, msg):
@@ -76,7 +76,7 @@ class Controller_Node(Node):
         filtered_scan.ranges = normalized_ranges
 
         self.publisher.publish(filtered_scan)
-        print(normalized_ranges)
+        print(len(normalized_ranges))
 
         # todo da capire come fare il forward contemporaneo delle informazioni provenienti da due sensori 
 
@@ -87,7 +87,7 @@ def main(args=None):
     rclpy.init(args=args)
 
     ann_controller = Controller_Node()
-    #TODO ann_controller.ann.upload_parameters()# parameters from neuroevolution
+    ann_controller.ann.upload_parameters()# parameters from neuroevolution
     rclpy.spin(ann_controller)
     
     ann_controller.destroy_node()
