@@ -7,7 +7,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
 from rclpy.qos import qos_profile_sensor_data
 from irobot_create_msgs.msg import HazardDetection, HazardDetectionVector
-from ANN_controller import ANN_controller
+#import ANN_controller
 
 class Controller_Node(Node):
 
@@ -37,7 +37,7 @@ class Controller_Node(Node):
         self.min_angle = -2.5
         self.max_angle = -0.5
 
-        self.ann = ANN_controller(3, 3, 2) # input size, hidden size, output size
+        #TODO self.ann = ANN_controller(3, 3, 2) # input size, hidden size, output size
 
     # detect collision with bumper
     def hazard_callback(self, msg):
@@ -67,21 +67,27 @@ class Controller_Node(Node):
         filtered_scan.scan_time = msg.scan_time
         filtered_scan.range_min = msg.range_min
         filtered_scan.range_max = msg.range_max
-        filtered_scan.ranges = filtered_ranges
+        #filtered_scan.ranges =  filtered_ranges 
         filtered_scan.intensities = msg.intensities
 
+        normalized_ranges = [(x - msg.range_min) / (msg.range_max - msg.range_min) * (msg.range_max - msg.range_min) + msg.range_min for x in filtered_ranges]
+        normalized_ranges = [msg.range_min if x==float('inf') else x for x in normalized_ranges] # remove inf values
+
+        filtered_scan.ranges = normalized_ranges
+
         self.publisher.publish(filtered_scan)
+        print(normalized_ranges)
 
-        # todo da capire come fare il forward contemporaneo delle infomrazioni provenienti da due sensori (sensor fusion)
+        # todo da capire come fare il forward contemporaneo delle informazioni provenienti da due sensori 
 
-        #lin_vel, ang_veö = self.ann.forward() qui ottengo i valori da pubblicare nel tpoic
+        #lin_vel, ang_vel = self.ann.forward() qui ottengo i valori da pubblicare nel tpoic
 
 def main(args=None):
 
     rclpy.init(args=args)
 
     ann_controller = Controller_Node()
-    ann_controller.ann.upload_parameters()# parameters from neuroevolution
+    #TODO ann_controller.ann.upload_parameters()# parameters from neuroevolution
     rclpy.spin(ann_controller)
     
     ann_controller.destroy_node()
