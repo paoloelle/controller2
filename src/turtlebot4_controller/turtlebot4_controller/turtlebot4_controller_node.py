@@ -40,8 +40,8 @@ class Controller_Node(Node):
     def hazard_callback(self, msg):
         if len(msg.detections) != 0:
             hazard = msg.detections[0]
-            if hazard.type == 1:
-                print(hazard)
+            if hazard.type == 2:
+                self.get_logger().info(hazard)
                 
 
 
